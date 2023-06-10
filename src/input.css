@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Work+Sans:wght@200;300;400;600;700;800&display=swap');
+
+/* .unli{
+    @apply relative  hover:after:w-[100%];
+
+}
+
+.unli::after{
+    @apply content-[''] absolute bg-white h-[2px] w-[0%] left-0 bottom-0  duration-300;
+
+}
+
+.mainnav{
+
+    @apply max-sm:mt-[100px] max-sm:absolute max-sm:right-10 max-sm:left-10 max-sm:text-center max-sm:justify-between;
+}
+
+.lis{
+
+    @apply max-sm:pl-0 pl-10 hover:text-[#f15a29] duration-300;
+}
+.aboutr{
+
+    @apply max-sm:flex max-sm:justify-center max-sm:items-center  max-sm:flex-col max-sm:h-[100%] max-sm:mt-0 ;
+}
+
+.one{
+
+    @apply max-sm:h-[200px] max-sm:text-center max-sm:ml-auto max-sm:mr-auto;
+} */
+
+@keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + (6*300px)));
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container .carousel-items {
+      animation: carouselAnim 60s infinite alternate linear;
+    }
+    @keyframes carouselAnim {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(calc(-100% + (5*300px)));
+      }
+    }
+  }
+  
+  .carousel-focus:hover {
+    transition: all 0.8s;
+    transform: scale(1.1);
+  }
+
+  .plat{
+    @apply pt-[200px] bg-gradient-to-br from-orange-600 to-orange-500    max-md:text-center
+  }
+
+  .gold{
+
+    @apply  font-maven font-bold text-6xl pl-8 max-sm:pl-0 
+  }
+
+  .silver{
+
+    @apply uppercase tracking-[4px] text-xl text-white pl-8 max-sm:pl-0 pt-8
+
+  }
+  .bronze{
+
+    @apply  pt-[20px] pl-8 text-lg font-thin font-maven  max-sm:pt-0 max-sm:pb-[20px] max-md:max-w-screen-md max-sm:pl-0
+  }
+
+  .noo{
+
+ @apply pb-[30px]  pl-8 text-lg  font-maven text-white max-sm:pt-0 max-sm:pb-[20px] max-md:max-w-screen-md max-sm:pl-0
+
+  }
